@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> TEST </title>
+    <link rel="stylesheet" href="question.css" type="text/css">
+</head>
+<body>
+    <h1> New Quiz </h1>
+    <div class="quiz_name">
+        <div><label for="quiz_name"> Name: </label></div>
+        <div><input required placeholder="Quiz 1" id="quiz_name"></div>
+    </div>
+    
+    <div class="question">
+        <form onsubmit="return false;" method="post" action="#">
+            <div class="title"> 
+                <h2> Question 1 </h2>
+                <input id="score" type="text"> / 30    
+            </div>
+            <div class="quiz_type">
+                <div class="type_row">
+                    <div class="type_field">
+                        <select id="type" name="type">
+                            <option value="multiple"> Multiple Choices </option>
+                            <option value="short"> Short Answer </option>
+                            <option value="matching"> Matching </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div id="content">
+                <div class="content_row">
+                    <div class="content_label">
+                        <label for="content"> Question: </label>
+                    </div>
+                    <div class="content_field">
+                        <textarea cols="40" rows="10" id="question" name="question"></textarea>
+                    </div>
+                </div>
+                <div class="answers">
+                    <div class="label"> Answers: </div>
+                    <div class="add"> 
+                        <button id="add_pa" onclick="add_possible()"> Add possible answer </button> 
+                        <button id="add_ca" onclick="add_correct()"> Add correct answer </button> 
+                    </div>
+                    <div class="p_answer">
+                        <div>
+                            <label> Possible answer: </label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="c_answer">
+                        <div>
+                            <label> Correct answer: </label>
+                            <input type="text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
